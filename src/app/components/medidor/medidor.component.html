@@ -1,18 +1,20 @@
-<div class="dx-fieldset">
+<app-slider (sliderValueChild)="sliderValue = $event" [sliderValue]="sliderValue"></app-slider>
+
+<!-- <div class="dx-fieldset">
     <div class="dx-fieldset-header">Control Temperatura</div>
     <div class="dx-field">
-        <dx-slider #slider [min]="0" [max]="150" [value]="10"></dx-slider>
+        <dx-slider #slider [min]="50" [max]="150" [value]="50"></dx-slider>
     </div>
     <div class="dx-field">
         <div class="dx-field-label">Valor</div>
         <div class="dx-field-value">
-            <dx-number-box [min]="0" [max]="150" [showSpinButtons]="true" [(value)]="slider.value"></dx-number-box>
+            <dx-number-box [min]="50" [max]="150" [showSpinButtons]="true" [(value)]="slider.value"></dx-number-box>
         </div>
     </div>
-</div>
+</div> -->
 
 
-<dx-circular-gauge id="gauge" [(value)]="slider.value">
+<dx-circular-gauge id="gauge" [(value)]="sliderValue">
     <dxo-scale [startValue]="50" [endValue]="150" [tickInterval]="10">
         <dxo-label [useRangeColors]="true"></dxo-label>
     </dxo-scale>

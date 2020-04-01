@@ -9,7 +9,7 @@ export class MedidorComponent implements OnInit {
   label: any;
   tooltip: any;
   tooltipEnabled: any;
-
+  //sliderValue = 50;
   constructor() {
   }
 

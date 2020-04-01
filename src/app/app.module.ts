@@ -30,6 +30,7 @@ import {
   DxSliderModule, DxNumberBoxModule
 } from 'devextreme-angular';
 import { MedidorComponent } from './components/medidor/medidor.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 
 
@@ -40,7 +41,8 @@ import { MedidorComponent } from './components/medidor/medidor.component';
     HomeComponent,
     GraficaComponent,
     VariosComponent,
-    MedidorComponent
+    MedidorComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<div class="dx-fieldset">
+    <div class="dx-fieldset-header">Control Temperatura</div>
+    <div class="dx-field">
+        <dx-slider #slider [min]="50" [max]="150" (onValueChanged)="captureValue($event)" [(value)]="sliderValue"></dx-slider>
+    </div>
+    <div class="dx-field">
+        <div class="dx-field-label">Valor</div>
+        <!-- para quitar los errores de consola quite el showSpinButtons para que no se actualicen los valores desde dos fuentes-->
+        <div class="dx-field-value">
+            <dx-number-box [min]="50" [max]="150" [showSpinButtons]="true" [(value)]="sliderValue"></dx-number-box>
+        </div>
+    </div>
+</div>
