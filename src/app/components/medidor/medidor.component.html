@@ -1,0 +1,28 @@
+<div class="dx-fieldset">
+    <div class="dx-fieldset-header">Control Temperatura</div>
+    <div class="dx-field">
+        <dx-slider #slider [min]="0" [max]="150" [value]="10"></dx-slider>
+    </div>
+    <div class="dx-field">
+        <div class="dx-field-label">Valor</div>
+        <div class="dx-field-value">
+            <dx-number-box [min]="0" [max]="150" [showSpinButtons]="true" [(value)]="slider.value"></dx-number-box>
+        </div>
+    </div>
+</div>
+
+
+<dx-circular-gauge id="gauge" [(value)]="slider.value">
+    <dxo-scale [startValue]="50" [endValue]="150" [tickInterval]="10">
+        <dxo-label [useRangeColors]="true"></dxo-label>
+    </dxo-scale>
+    <dxo-range-container palette="pastel">
+        <dxi-range [startValue]="50" [endValue]="90"></dxi-range>
+        <dxi-range [startValue]="90" [endValue]="130"></dxi-range>
+        <dxi-range [startValue]="130" [endValue]="150"></dxi-range>
+    </dxo-range-container>
+    <dxo-export [enabled]="true"></dxo-export>
+    <dxo-title text="Temperatura">
+        <dxo-font [size]="28"></dxo-font>
+    </dxo-title>
+</dx-circular-gauge>

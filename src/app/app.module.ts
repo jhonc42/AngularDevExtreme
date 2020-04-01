@@ -11,18 +11,26 @@ import {PersonService} from './services/person.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { GraficaComponent } from './components/grafica/grafica.component';
-
-import { DxButtonModule } from 'devextreme-angular/ui/button';
-import { DxLoadIndicatorModule } from 'devextreme-angular/ui/load-indicator';
-
-import { DxPieChartModule } from 'devextreme-angular/ui/pie-chart';
 import { VariosComponent } from './components/varios/varios.component';
+
+// import { DxButtonModule } from 'devextreme-angular/ui/button';
+// import { DxLoadIndicatorModule } from 'devextreme-angular/ui/load-indicator';
+
+// import { DxPieChartModule } from 'devextreme-angular/ui/pie-chart';
+
 import {
+  DxButtonModule,
+  DxLoadIndicatorModule,
+  DxPieChartModule,
 	DxSelectBoxModule,
 	DxTextAreaModule,
 	DxDateBoxModule,
-	DxFormModule
+  DxFormModule,
+  DxCircularGaugeModule,
+  DxSliderModule, DxNumberBoxModule
 } from 'devextreme-angular';
+import { MedidorComponent } from './components/medidor/medidor.component';
+
 
 
 @NgModule({
@@ -31,7 +39,8 @@ import {
     NavbarComponent,
     HomeComponent,
     GraficaComponent,
-    VariosComponent
+    VariosComponent,
+    MedidorComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +51,9 @@ import {
     DxTextAreaModule,
     DxDateBoxModule,
     DxFormModule,
+    DxCircularGaugeModule,
+    DxSliderModule,
+    DxNumberBoxModule,
     APP_ROUTING
   ],
   providers: [
